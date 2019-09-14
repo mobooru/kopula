@@ -1,0 +1,25 @@
+{
+  "name": "kopula",
+  "version": "1.0.0",
+  "description": "REST API thingy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mobooru/kopula.git"
+  },
+  "keywords": [
+    "REST",
+    "API"
+  ],
+  "author": "Hampus Lundqvist",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mobooru/kopula/issues"
+  },
+  "homepage": "https://github.com/mobooru/kopula#readme",
+  "dependencies": {
+  }
+}

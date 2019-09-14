@@ -1,0 +1,22 @@
+<html>
+  <script src="./index.js"></script>
+  <script>
+    function genID() {
+      return `${(Math.random()*0xFFFF<<0).toString(16)}-${(Math.random()*0xFFFF<<0).toString(16)}-${(Math.random()*0xFFFF<<0).toString(16)}`
+    }
+
+    const User = new Kopula('http://localhost/api/user', {
+      name: String,
+      id: { type: String, default: 'ffff-ffff-ffff' },
+      coins: { type: Number, default: 0 }
+    })
+
+    async function main () {
+      let user = await User.post({ id: genID(), name: 'John' }) // Create a user called John.
+      user = await user.put({ coins: user.values.coins + 10 }) // Give John 10 coins.
+      user = await user.delete() // Delete John, he does not deserve life.
+    }
+
+    main()
+  </script>
+</html>
